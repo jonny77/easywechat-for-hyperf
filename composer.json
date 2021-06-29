@@ -1,18 +1,19 @@
 {
   "name": "overtrue/wechat",
-  "description": "微信SDK",
+  "description": "微信SDK-兼容hyperf",
   "keywords": [
     "easywechat",
     "wechat",
     "weixin",
     "weixin-sdk",
-    "sdk"
+    "sdk",
+    "wexinpay-for-hyperf"
   ],
   "license": "MIT",
   "authors": [
     {
-      "name": "overtrue",
-      "email": "anzhengchao@gmail.com"
+      "name": "fg",
+      "email": "jonny_77@msn.cn"
     }
   ],
   "require": {
