@@ -192,7 +192,6 @@ abstract class Handler
     {
         $sign = $message['sign'];
         unset($message['sign']);
-
         if (Support\generate_sign($message, $this->app->getKey()) !== $sign) {
             throw new InvalidSignException();
         }
