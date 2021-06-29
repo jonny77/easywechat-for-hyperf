@@ -23,8 +23,8 @@ class WechatPayBase
             'notify_url' => env('MINI_NOTIFYURL')
         ];
         $app = Factory::payment($payConfig);
-        $request = di(RequestInterface::class);
-        $app->rebind('request',$request);
+        $request = di(RequestInterface::class);//重点
+        $app->rebind('request',$request);//重点
         return $app;
     }
 
