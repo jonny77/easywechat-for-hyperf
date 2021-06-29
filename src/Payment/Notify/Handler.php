@@ -134,7 +134,12 @@ abstract class Handler
         }
 
         try {
-            $message = XML::parse(strval($this->app['request']->getContent()));
+            if($this->app['request'] instanceof  \Hyperf\HttpServer\Request){
+                $message = XML::parse(strval($this->app['request']->getBody()->getContents()));
+            }else{
+                $message = XML::parse(strval($this->app['request']->getContent()));
+
+            }
         } catch (\Throwable $e) {
             throw new Exception('Invalid request XML: '.$e->getMessage(), 400);
         }
